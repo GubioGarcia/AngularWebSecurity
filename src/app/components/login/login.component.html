@@ -1,1 +1,19 @@
-<p>login works!</p>
+<div class="login-container">
+  <Form (ngSubmit)="onLogin()" class="login-box">
+      <h2>Login</h2>
+
+      <!-- Campo de login -->
+      <p-inputGroup>
+          <p-inputGroupAddon><i class="pi pi-user"></i></p-inputGroupAddon>
+          <input pInputText [(ngModel)]="nome" placeholder="Login" />
+      </p-inputGroup>
+
+      <!-- Campo de senha -->
+      <p-inputGroup>
+          <p-inputGroupAddon><i class="pi pi-lock"></i></p-inputGroupAddon>
+          <input type="password" pInputText [(ngModel)]="senha" placeholder="Senha" />
+      </p-inputGroup>
+
+      <button pButton type="submit" label="Entrar" class="p-mt-3"></button>
+  </Form>
+</div>
